@@ -1,0 +1,79 @@
+body{
+background-color: rgb(0, 0, 0);
+}
+.foto-perfil {
+width: 100px;           
+height: 150px; 
+margin-left: 1060px;
+border: 2px solid rgb(0, 0, 0);
+border-radius: 20px;
+object-fit: cover;
+
+
+}
+.pr {
+color: aliceblue;
+}
+.foto-ifal {
+width: 40px;           
+height: 40px; 
+margin-left: 1460px;
+
+
+}
+body {
+background-color: black; 
+color: white;         
+font-family: sans-serif;
+text-align: center;   
+}
+.caixa-principal {
+margin-top: 50px;
+padding: 20px;
+}
+
+.meu-nome {
+font-size: 30px;
+border-bottom: 2px solid white; 
+display: inline-block;
+
+}
+
+.bloco {
+margin-top: 40px;
+border: 1px solid #444; 
+padding: 15px;
+width: 60%;            
+margin-left: auto;     
+margin-right: auto;
+}
+
+h2 {
+color: white;
+text-decoration: underline;
+}
+
+
+.link-instituicao {
+color: #00ff00;     
+text-decoration: none; 
+font-weight: bold;
+border: 1px solid #00ff00; 
+padding: 10px 20px;
+display: inline-block; 
+margin-top: 10px;
+border-radius: 5px;
+transition: 0.3s;     
+}
+
+.link-instituicao:hover {
+background-color: #00ff00; 
+color: black;
+}
+.foto-insta{
+    width: 20px;
+}
+.foto-gmail{
+    width: 20px;
+}
+

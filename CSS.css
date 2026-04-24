@@ -1,0 +1,58 @@
+body{background-color: rgb(0, 0, 0);
+
+}
+
+h1{
+    color: aliceblue ;
+    text-align: center;
+}
+
+.subtitulo{
+    color: aliceblue;
+}
+
+.foto-perfil {
+width: 160px;           
+height: 250px; 
+margin-left: 25px;
+border: 2px solid white;
+border-radius: 20px;
+object-fit: cover;
+
+
+}
+
+.foto-perfil:hover {
+transform: scale(1.05); 
+transition: 0.3s;      
+border-color: #1eff00;  
+}
+
+.foto-ifal {
+width: 40px;           
+height: 40px; 
+
+
+
+}
+
+.container-principal {
+display: flex;        
+align-items: center; 
+justify-content: space-around; 
+padding: 50px;     
+}
+
+.lado-direito {
+max-width: 500px;     
+color: white;
+text-align: left;   
+  
+}
+.legenda {
+color: white;
+margin-top: 10px;     
+font-size: 0.9rem;
+text-align: center;
+}
+
