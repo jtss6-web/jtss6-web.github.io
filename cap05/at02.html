@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PWEB1 - Cap. 05 AT01: Cadastro de Usuário</title>
+    
+    <style>
+        /* Estilo embutido para evitar problemas de carregamento */
+        body {
+            background-color: #000000 !important;
+            color: #ffffff !important;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        form {
+            background-color: #1a1a1a;
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        label { display: block; margin-top: 15px; margin-bottom: 5px; font-weight: bold; }
+        input {
+            width: 100%; padding: 10px; background-color: #2b2b2b;
+            border: 1px solid #444; color: #fff; border-radius: 4px; box-sizing: border-box;
+        }
+        fieldset { border: 1px solid #444; padding: 15px; margin-top: 20px; }
+        legend { color: #3498db; font-weight: bold; }
+        button {
+            margin-top: 20px; padding: 10px 20px; background-color: #3498db;
+            color: white; border: none; border-radius: 4px; cursor: pointer;
+        }
+        a { color: #ffffff !important; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cadastro de Usuário</h1>
+        <p><a href="../index.html">← Voltar para a página principal</a></p>
+    </header>
+
+    <main>
+        <p>* Campos obrigatórios</p>
+        
+        <form action="https://httpbin.org/get" method="GET">
+            <div>
+                <label for="nome">Nome Completo: *</label>
+                <input type="text" id="nome" name="nome" autocomplete="name" aria-required="true" required>
+            </div>
+
+            <div>
+                <label for="email">E-mail: *</label>
+                <input type="email" id="email" name="email" autocomplete="email" aria-required="true" aria-describedby="email-desc" required>
+                <small id="email-desc">Exemplo: seuemail@dominio.com</small>
+            </div>
+
+            <div>
+                <label for="data_nascimento">Data de Nascimento: *</label>
+                <input type="date" id="data_nascimento" name="data_nascimento" aria-required="true" aria-describedby="data-desc" required>
+                <small id="data-desc">Formato: dia/mês/ano</small>
+            </div>
+
+            <fieldset>
+                <legend>Gênero:</legend>
+                <input type="radio" id="fem" name="genero" value="feminino" aria-describedby="genero-desc">
+                <label for="fem">Feminino</label>
+                
+                <input type="radio" id="masc" name="genero" value="masculino" aria-describedby="genero-desc">
+                <label for="masc">Masculino</label>
+                <p id="genero-desc" style="display:none;">Selecione uma opção de gênero.</p>
+            </fieldset>
+
+            <button type="submit">Enviar Cadastro</button>
+        </form>
+    </main>
+
+    <script>
+    // Trava para não permitir datas futuras
+    document.getElementById('data_nascimento').max = 
+    new Date().toISOString().split('T')[0];
+
+    // Evita o erro de "File not found" e mostra um aviso de sucesso
+    document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio real para lugar nenhum
+        alert('Formulário enviado com sucesso! (Simulação)');
+    });
+</script>
+
+</body>
+</html>

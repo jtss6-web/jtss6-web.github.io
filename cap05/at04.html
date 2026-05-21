@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PWEB1 - Cap. 05 AT04: Inscrição em Evento</title>
+    
+    <style>
+        body { background-color: #000000 !important; color: #ffffff !important; font-family: Arial, sans-serif; padding: 20px; }
+        form { background-color: #1a1a1a; padding: 25px; border-radius: 8px; border: 1px solid #333; max-width: 600px; margin: 20px auto; }
+        label { display: block; margin-top: 15px; margin-bottom: 5px; font-weight: bold; }
+        input, select { width: 100%; padding: 10px; background-color: #2b2b2b; border: 1px solid #444; color: #fff; border-radius: 4px; box-sizing: border-box; }
+        button { margin-top: 20px; padding: 10px 20px; background-color: #3498db; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        a { color: #ffffff !important; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Inscrição: Semana de Tecnologia IFAL</h1>
+        <p><a href="../index.html">← Voltar para a página principal</a></p>
+    </header>
+
+    <main>
+        <p>* Campos obrigatórios</p>
+        
+        <form action="https://httpbin.org/post" method="POST" enctype="multipart/form-data">
+            
+            <input type="hidden" name="edicao" value="2026">
+
+            <label for="nome">Nome completo: *</label>
+            <input type="text" id="nome" name="nome" required aria-required="true">
+
+            <label for="email">E-mail institucional: *</label>
+            <input type="email" id="email" name="email" required aria-required="true">
+
+            <label for="cidade">Cidade de origem:</label>
+            <input list="cidades" id="cidade" name="cidade">
+            <datalist id="cidades">
+                <option value="Maceió">
+                <option value="Arapiraca">
+                <option value="Palmeira dos Índios">
+                <option value="Penedo">
+                <option value="Satuba">
+                <option value="Murici">
+                <option value="Maragogi">
+                <option value="Pilar">
+            </datalist>
+
+            <label for="foto">Foto para crachá:</label>
+            <input type="file" id="foto" name="foto" accept="image/jpeg, image/png" aria-describedby="foto-desc">
+            <small id="foto-desc">Formatos aceitos: JPG e PNG. Tamanho máximo: 2 MB.</small>
+
+            <label for="chegada">Data e hora preferida para chegada:</label>
+            <input type="datetime-local" id="chegada" name="chegada">
+
+            <label for="experiencia">Nível de experiência: <span id="valor-experiencia">5</span>/10</label>
+            <input type="range" id="experiencia" name="experiencia" min="0" max="10" step="1" value="5" oninput="document.getElementById('valor-experiencia').textContent = this.value">
+
+            <label for="cor_camiseta">Cor de preferência para a camiseta:</label>
+            <input type="color" id="cor_camiseta" name="cor_camiseta" value="#1a73e8">
+
+            <label for="oficinas">Oficinas de interesse:</label>
+            <select multiple id="oficinas" name="oficinas[]" size="4" aria-describedby="oficina-desc">
+                <option value="web">Desenvolvimento Web</option>
+                <option value="bd">Banco de Dados</option>
+                <option value="ia">Inteligência Artificial</option>
+                <option value="seg">Segurança</option>
+                <option value="infra">Infraestrutura</option>
+            </select>
+            <small id="oficina-desc">Use Ctrl (ou Cmd no Mac) para selecionar mais de uma oficina.</small>
+
+            <button type="submit">Confirmar inscrição</button>
+        </form>
+    </main>
+
+</body>
+</html>
