@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição em Curso Técnico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="cabecalho-principal">
+        <h1>Inscrição para o Curso Técnico</h1>
+        <p class="texto-destaque">Preencha o formulário abaixo para garantir a sua vaga na próxima turma.</p>
+    </header>
+
+    <main class="secao-conteudo">
+        <form class="formulario-inscricao">
+            
+            <div class="grupo-campo">
+                <label for="nome" class="campo-obrigatorio">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" class="campo-texto" required placeholder="Digite seu nome completo">
+            </div>
+
+            <div class="grupo-campo">
+                <label for="email" class="campo-obrigatorio">E-mail:</label>
+                <input type="email" id="email" name="email" class="campo-texto" required placeholder="exemplo@email.com">
+            </div>
+
+            <div class="grupo-campo">
+                <label for="data-nasc">Data de Nascimento:</label>
+                <input type="date" id="data-nasc" name="data-nasc" class="campo-texto">
+            </div>
+
+            <div class="grupo-campo">
+                <label for="curso">Curso Desejado:</label>
+                <select id="curso" name="curso" class="campo-texto">
+                    <option value="informatica">Desenvolvimento de Sistemas</option>
+                    <option value="quimica">Química</option>
+                    <option value="agropecuaria">Agropecuária</option>
+                </select>
+            </div>
+
+            <div class="grupo-campo">
+                <label>Turno Preferencial:</label>
+                <div class="opcoes-container">
+                    <label><input type="radio" name="turno" value="manha" checked> Manhã</label>
+                    <label><input type="radio" name="turno" value="tarde"> Tarde</label>
+                </div>
+            </div>
+
+            <div class="grupo-campo">
+                <label for="motivo">Por que você quer fazer este curso?</label>
+                <textarea id="motivo" name="motivo" class="campo-texto" placeholder="Conte um pouco sobre suas motivações..."></textarea>
+            </div>
+
+            <div class="grupo-campo checkbox-container">
+                <input type="checkbox" id="termos" name="termos" required>
+                <label for="termos" class="campo-obrigatorio">Aceito os termos de uso e condições da instituição.</label>
+            </div>
+
+            <button type="submit" class="botao-enviar">Confirmar Inscrição</button>
+
+        </form>
+    </main>
+
+    <footer class="rodape-pagina">
+        <p>Desenvolvido por: josé tássio & arthur perreira</p>
+        <p>Disciplina: Desenvolvimento Web | Data: 19/06/2026</p>
+    </footer>
+
+</body>
+</html>
