@@ -1,92 +1,82 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ATIVIDADE CSS</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS.css">
+    <title>JOSE TASSIO</title>
+    <link rel="icon" type="image/png" href="LOGOIFAL.jpg"><!--logo do ifal no titulo--> 
 </head>
-<body>
-    <h2>ATIVIDADE CSS EM PRATICA</h2>
-    <h3></h3>
-    <h3></h3>
 
+<!--parte de fotos e abas de animaçoes-->
 
-
-   <header>
-        <h1>Seleção de Suite</h1>
-    </header>
-
-    <main>
-        <p>* Campos obrigatórios</p>
-        
-        <form action="https://httpbin.org/post" method="POST">
-            
-            <fieldset>
-                <legend>Dados Pessoais</legend>
-                <label for="nome">Nome completo: *</label>
-                <input type="text" id="nome" name="nome" required minlength="5" maxlength="100" aria-required="true">
-
-                <label for="cpf">CPF: *</label>
-                <input type="text" id="cpf" name="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" title="CPF no formato 000.000.000-00" aria-required="true">
-
-                <label for="telefone">Telefone: *</label>
-                <input type="tel" id="telefone" name="telefone" required pattern="\(\d{2}\)\s\d{4,5}-\d{4}" placeholder="(82) 99999-9999" aria-required="true">
-
-                <label for="email">E-mail: *</label>
-                <input type="email" id="email" name="email" required aria-required="true">
-            </fieldset>
-
-            <fieldset>
-                <legend>Dados Acadêmicos</legend>
-                <label for="curso">Suites: *</label>
-                <select id="curso" name="curso" required aria-required="true">
-                    <option value="">Selecione uma Suite</option>
-                    <optgroup label="Presidencial">
-                        <option value="si">Copacabana Palace   R$ 32.000</option>
-                        <option value="cc">Ritz Lagoa da Anta   R$ 5.500  </option>
-                        <option value="ec">Best Western Premier Maceió   R$ 3.000 </option>
-                    </optgroup>
-
-                </select>
-
-                 <fieldset>
-                <legend>Dados Acadêmicos</legend>
-                <label for="curso">Gestão: *</label>
-                <select id="curso" name="curso" required aria-required="true">
-                  
-                    
+<body> <img src="LOGOIFAL.jpg" alt="logo ifal " class="foto-ifal" >
+   <h1>JOSÉ TÁSSIO DOS SANTOS SILVA</h1>    
     
-                    <optgroup label="Gestão">
-                        <option value="adm">Vip</option>
-                        <option value="cont">Premium</option>
-                    </optgroup>
-                </select>
+<!--classes-->
+    <div class="container-principal">
+    <div class="lado-esquerdo">
+        
+    <a href="INFORMAÇOES.html" target="">
+    <img src="FOTO.jpg.jpeg" alt="foto de jose tassio " class="foto-perfil" >
+    </a>
 
-                <fieldset>
-                    <legend>Período:</legend>
-                    <input type="radio" id="manha" name="periodo" value="manha" required><label for="manha">Manhã</label>
-                    <input type="radio" id="tarde" name="periodo" value="tarde" required><label for="tarde">Tarde</label>
-                    <input type="radio" id="noite" name="periodo" value="noite" required><label for="noite">Noite</label>
-                </fieldset>
+    <p class="legenda">Estudante do <strong>IFAL</strong> - Campus Maceió</p>
 
-                <label for="ano_ingresso">Ano de ingresso pretendido: *</label>
-                <input type="number" id="ano_ingresso" name="ano_ingresso" min="2025" max="2030" required aria-required="true">
-            </fieldset>
+    </div>
 
-            <fieldset>
-                <legend>Áreas de Interesse</legend>
-                <input type="checkbox" id="web" name="interesses[]" value="web"><label for="web">Desenvolvimento Web</label>
-                <input type="checkbox" id="bd" name="interesses[]" value="bd"><label for="bd">Banco de Dados</label>
-                <input type="checkbox" id="ia" name="interesses[]" value="ia"><label for="ia">Inteligência Artificial</label>
-                <input type="checkbox" id="seg" name="interesses[]" value="seg"><label for="seg">Segurança</label>
-                <input type="checkbox" id="infra" name="interesses[]" value="infra"><label for="infra">Infraestrutura</label>
-            </fieldset>
+    <div class="lado-direito">
+   <h2>Sobre Mim</h2>
+   <p>Olá! Sou estudante do 1º ano do curso técnico em Desenvolvimento de Sistemas no IFAL - Campus Maceió. Sou apaixonado por tecnologia e estou iniciando minha jornada no mundo da programação web, explorando tecnologias como HTML, CSS e JavaScript.
+           
+Busco constantemente aprimorar minhas habilidades técnicas e desenvolver projetos que unam lógica e criatividade. Clique na minha foto ao lado para acessar meu portfólio completo.</p>
+    </div>
+</div>
 
-            <button type="submit">Solicitar matrícula</button>
-            <button type="reset">Limpar formulário</button>
-        </form>
-    </main>
+<nav aria-label="Atividades do Capítulo 4">
+  <h2>Capítulo 4 — Tabelas, Listas e Mídia</h2>
+  <ul>
+    <li>
+      <a href="cap04/cap04-at01-tabela-basica.html">
+        Atividade 1 — Tabela Básica
+      </a>
+    </li>
+    <li>
+      <a href="cap04/cap04-at02-tabela-semantica.html">
+        Atividade 2 — Tabela Semântica com Mesclagem
+      </a>
+    </li>
+    <li>
+      <a href="cap04/cap04-at03-listas-avancadas.html">
+        Atividade 3 — Listas Avançadas e Glossário
+      </a>
+    </li>
+    <li>
+      <a href="cap04/cap04-at04-multimidia.html">
+        Atividade 4 — Página Multimídia
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<section>
+  <h2>Capítulo 5 — Formulários HTML</h2><style> h2{color: aliceblue;}</style>
+
+  <nav>
+    <ul>
+      <li><a href="cap05/at01.html">AT01 — Formulário de Contato</a></li>
+      <li><a href="cap05/at02.html">AT02 — Cadastro de Usuário</a></li>
+      <li><a href="cap05/at03.html">AT03 — Matrícula Acadêmica</a></li>
+      <li><a href="cap05/at04.html">AT04 — Inscrição em Evento</a></li>
+      <li><a href="cap05/at05.html">AT05 — Pesquisa Acadêmica</a></li>
+    </ul>
+  </nav>
+</section>
+
+
+
 
 </body>
+
 </html>
