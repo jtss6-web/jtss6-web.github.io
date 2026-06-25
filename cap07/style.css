@@ -1,0 +1,198 @@
+/* Reflexão Bloco 1:
+- rem: Unidade relativa ao tamanho da fonte do elemento raiz (html). Ideal para tipografia, pois respeita as preferências de acessibilidade e zoom do usuário de forma global.
+- em: Unidade relativa ao tamanho da fonte do próprio elemento (ou do pai). Ideal para paddings e margins de componentes internos (como botões e cartões), pois se a fonte do componente mudar, o espaçamento escala proporcionalmente.
+- %: Unidade relativa à largura do elemento pai. Ideal para estruturas de layout fluidas e responsivas, adaptando-se dinamicamente ao redimensionamento da tela.
+*/
+
+/* ---------- Base ---------- */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  color: #333333;
+  background-color: #f5f5f5;
+}
+
+/* ---------- Cabeçalho ---------- */
+.cabecalho {
+  background-color: #1565c0;
+  padding: 2rem; /* 32px / 16 = 2rem */
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 2rem; /* 32px / 16 = 2rem */
+  margin: 0;
+}
+
+.subtitulo {
+  color: #bbdefb;
+  font-size: 1rem; /* 16px / 16 = 1rem */
+}
+
+/* ---------- Menu de navegação ---------- */
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0; /* 16px = 1rem */
+}
+
+.menu li {
+  display: inline-block;
+  margin-right: 1.5rem; /* 24px = 1.5rem */
+}
+
+.menu a {
+  color: #ffffff;
+  font-size: 1rem; /* 16px = 1rem */
+  text-decoration: none;
+}
+
+/* ---------- Seções ---------- */
+.secao {
+  padding: 2rem; /* 32px = 2rem */
+  max-width: 60rem; /* 960px / 16 = 60rem (mantém legível em telas largas) */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+h2 {
+  color: #1565c0;
+  font-size: 1.5rem; /* 24px / 16 = 1.5rem */
+}
+
+h3 {
+  color: #0d47a1;
+  font-size: 1.25rem; /* 20px / 16 = 1.25rem */
+}
+
+p {
+  font-size: 1rem; /* 16px = 1rem */
+  line-height: 1.5rem; /* 24px = 1.5rem */
+}
+
+.destaque {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #b71c1c;
+}
+
+/* ---------- Grade de trilhas ---------- */
+.cartao {
+  display: inline-block;
+  width: 22%; /* Mudado de 280px fixos para unidade fluida */
+  min-width: 240px; /* Garante que não quebre em telas muito pequenas */
+  vertical-align: top;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  /* em: escala proporcionalmente caso o font-size mude */
+  padding: 1em; /* 16px = 1em baseado no font-size padrão */
+  margin: 0.5em; /* 8px = 0.5em */
+  box-sizing: border-box;
+}
+
+.botao {
+  display: inline-block;
+  background-color: #1565c0;
+  color: #ffffff;
+  font-size: 1rem;
+  text-decoration: none;
+  /* em: se o botão mudar de tamanho de fonte, o preenchimento acompanha */
+  padding: 0.5em 1em; /* 8px 16px */
+  margin-top: 0.5em; /* 8px */
+}
+
+/* ---------- Lista de programação ---------- */
+.lista-dias {
+  font-size: 1rem;
+  line-height: 1.75rem; /* 28px / 16 = 1.75rem */
+}
+
+/* ---------- Formulário ---------- */
+.formulario {
+  max-width: 30rem; /* 480px = 30rem */
+  width: 100%;
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+input, textarea {
+  display: block;
+  width: 100%; /* Mudado de 320px para cobrir a largura total fluida do form */
+  max-width: 20rem; /* Limita o tamanho máximo antigo de 320px */
+  font-size: 1rem;
+  padding: 0.5rem; /* 8px */
+  margin-top: 0.25rem; /* 4px */
+  border: 1px solid #999999;
+  box-sizing: border-box;
+}
+
+button {
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #1565c0;
+  padding: 0.5rem 1.5rem; /* 8px 24px */
+  margin-top: 1rem;
+}
+
+/* ---------- Rodapé ---------- */
+.rodape {
+  background-color: #263238;
+  color: #cfd8dc;
+  padding: 1.5rem; /* 24px */
+  font-size: 0.875rem; /* 14px / 16 = 0.875rem */
+}
+
+
+/* 1. Descendente vs. Filho Direto no Menu */
+/* Modificando a regra '.menu a' antiga para usar o combinador correto */
+.menu > ul > li > a { 
+  color: #ffffff;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+
+
+/* Bloco 2:
+   Diferença prática: O seletor descendente (.menu a) seleciona QUALQUER tag 'a' dentro do menu, não importa quão profunda esteja. 
+   O seletor de filho direto (>) exige que o elemento seja filho imediato, evitando estilizar âncoras indesejadas de submenus futuros. */
+
+
+   
+/* 2. Filho direto (>) na lista de programação */
+.lista-dias > li {
+  font-weight: bold; /* Estiliza apenas o primeiro nível (Segunda, Terça...) */
+}
+
+/* 3. Irmão adjacente (+) */
+h2 + p {
+  margin-top: 1.5rem; /* Aplica um recuo superior apenas no parágrafo imediatamente após um h2 */
+}
+
+/* 4. Irmão geral (~) */
+.destaque ~ p {
+  color: #555555;
+  font-style: italic; /* Dá um tratamento visual aos parágrafos que sucedem o destaque */
+}
+
+/* 5. Agrupamento unificado para eliminar duplicação */
+/* Unificando títulos */
+h1, h2, h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* Unificando inputs e textarea (removidos da declaração individual anterior) */
+input, textarea {
+  display: block;
+  width: 100%;
+  max-width: 20rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #999999;
+  box-sizing: border-box;
+}
