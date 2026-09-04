@@ -1,40 +1,98 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<!-- ============================================================
+     TEMPLATE — Página pessoal com CSS Grid
+     Programação Web / Introdução às Tecnologias Web — IFAL
 
-<head> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS.css">
-    <title>JOSE TASSIO</title>
-    <link rel="icon" type="image/png" href="LOGOIFAL.jpg"><!--logo do ifal no titulo--> 
+     COMO USAR:
+     1) Copie ESTE index.html para o seu repositório (não mude a estrutura).
+     2) Escolha UM dos 3 temas de CSS (tema-1-indigo.css, tema-2-escuro.css
+        ou tema-3-editorial.css) e salve-o no seu projeto como  estilo.css
+        (é o nome que este HTML carrega logo abaixo).
+     3) Troque os textos marcados com "TROQUE" pelo seu conteúdo.
+
+     IMPORTANTE: o LAYOUT é feito com CSS Grid e é o mesmo nos 3 temas.
+     Você escolhe a APARÊNCIA (fonte, cores, bordas), não o layout.
+     ============================================================ -->
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Pessoal — JOSÉ TASSIO DOS SANTOS SILVA</title>
+  <!-- Salve o tema escolhido como "estilo.css" (mesma pasta deste arquivo) -->
+  <link rel="stylesheet" href="estilo.css">
 </head>
 
-<!--parte de fotos e abas de animaçoes-->
+<body>
+  <div class="pagina">
 
-<body> <img src="LOGOIFAL.jpg" alt="logo ifal " class="foto-ifal" >
-   <h1>JOSÉ TÁSSIO DOS SANTOS SILVA</h1>    
-    
-<!--classes-->
-    <div class="container-principal">
-    <div class="lado-esquerdo">
-        
-    <a href="INFORMAÇOES.html" target="">
-    <img src="FOTO.jpg.jpeg" alt="foto de jose tassio " class="foto-perfil" >
-    </a>
+    <!-- ====== CABEÇALHO — TROQUE pelo seu nome e sua frase ====== -->
+    <header class="cabecalho">
+      <h1>JOSÉ TASSIO DOS SANTOS SILVA</h1>
+      <p>Estudante de Sistemas de Informação · IFAL</p>
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
 
-    <p class="legenda">Estudante do <strong>IFAL</strong> - Campus Maceió</p>
-
-    </div>
-
-    <div class="lado-direito">
-   <h2>Sobre Mim</h2>
-   <p>Olá! Sou estudante do 1º ano do curso técnico em Desenvolvimento de Sistemas no IFAL - Campus Maceió. Sou apaixonado por tecnologia e estou iniciando minha jornada no mundo da programação web, explorando tecnologias como HTML, CSS e JavaScript.
+    <!-- ====== CONTEÚDO PRINCIPAL ====== -->
+    <main class="principal">
+      <section id="sobre" class="cartao">
+        <h2>Sobre mim</h2>
+        <!-- TROQUE por uma breve apresentação sua -->
+        <p>Olá! Sou estudante do 1º ano do curso técnico em Desenvolvimento de Sistemas no IFAL - Campus Maceió. Sou apaixonado por tecnologia e estou iniciando minha jornada no mundo da programação web, explorando tecnologias como HTML, CSS e JavaScript.
            
-Busco constantemente aprimorar minhas habilidades técnicas e desenvolver projetos que unam lógica e criatividade. Clique na minha foto ao lado para acessar meu portfólio completo.</p>
-    </div>
-</div>
+Busco constantemente aprimorar minhas habilidades técnicas e desenvolver projetos que unam lógica e criatividade.</p>
+      </section>
 
-<nav aria-label="Atividades do Capítulo 4">
+      <section id="projetos" class="cartao">
+        <h2>Projetos</h2>
+        <!-- Galeria com Grid: cada .projeto é um card; adicione/remova à vontade -->
+        <div class="projetos">
+          <article class="projeto">
+            <h3>Projeto 1</h3>
+            <p>O que é e o que você fez. TROQUE por um projeto seu.</p>
+          </article>
+          <article class="projeto">
+            <h3>Projeto 2</h3>
+            <p>Descrição curta do projeto.</p>
+          </article>
+          <article class="projeto">
+            <h3>Projeto 3</h3>
+            <p>Descrição curta do projeto.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- ====== BARRA LATERAL ====== -->
+    <aside class="lateral">
+      <section class="cartao">
+        <h2>Habilidades</h2>
+        <!-- TROQUE pelas suas habilidades -->
+        <ul class="habilidades">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </section>
+
+      <section id="contato" class="cartao">
+        <h2>Contato</h2>
+        <!-- TROQUE pelos seus links -->
+        <ul class="contato">
+          <li>✉️ <a href="mailto:jsst6@aluno.ifal.edu.br">jtss6@aluno.ifal.edu.br</a></li>
+          <li>🐙 <a href="https://github.com/jtss6-web">github.com/jtss6-web</a></li>
+
+          <li><a href="INFORMAÇOES.html"> 
+        ⚠️clique aqui para mais informaçoes sobre mim
+      </a></li>
+
+
+
+          <nav aria-label="Atividades do Capítulo 4">
   <h2>Capítulo 4 — Tabelas, Listas e Mídia</h2>
   <ul>
     <li>
@@ -96,9 +154,14 @@ Busco constantemente aprimorar minhas habilidades técnicas e desenvolver projet
     </ul>
   </nav>
 </section>
+        </ul>
+      </section>
+    </aside>
 
+    <!-- ====== RODAPÉ — TROQUE o nome ====== -->
+    <footer class="rodape">© 2026 Seu Nome · feito com HTML + CSS Grid</footer>
 
-
+  </div>
 </body>
 
 </html>
